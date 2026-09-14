@@ -20,34 +20,14 @@ const FacebookIcon = ({ className }: { className?: string }) => (
 
 const trainers = [
   {
-    name: "Kavindu Perera",
-    role: "Head Coach & Bodybuilding Specialist",
+    name: "Chathuranga Darshana",
+    role: "Head Coach & Fitness Expert",
     specialization: "Bodybuilding, Strength & Conditioning",
     experience: "8+ Years Experience",
-    achievement: "Mr. Sabaragamuwa 2026 — Title Winner",
+    achievement: "Professional Trainer",
     image: "/images/champion.jpg",
     instagram: "#",
-    facebook: "#",
-  },
-  {
-    name: "Ashan Fernando",
-    role: "Certified Personal Trainer",
-    specialization: "Weight Loss, HIIT & Functional Training",
-    experience: "5+ Years Experience",
-    achievement: "NSCA Certified Professional",
-    image: "/images/gallery-2.jpg",
-    instagram: "#",
-    facebook: "#",
-  },
-  {
-    name: "Dimantha Silva",
-    role: "Strength & Performance Coach",
-    specialization: "Powerlifting & Athletic Performance",
-    experience: "6+ Years Experience",
-    achievement: "National Level Powerlifter",
-    image: "/images/gallery-5.jpg",
-    instagram: "#",
-    facebook: "#",
+    facebook: "https://www.facebook.com/share/1HJB4MQVgi/?mibextid=wwXIfr",
   },
 ];
 
@@ -126,7 +106,9 @@ export default function Trainers() {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="mt-20 grid sm:grid-cols-2 lg:grid-cols-3 gap-10"
+          className={`mt-20 grid gap-10 ${
+            trainers.length === 1 ? "max-w-md mx-auto" : "sm:grid-cols-2 lg:grid-cols-3"
+          }`}
         >
           {trainers.map((trainer) => (
             <motion.div
