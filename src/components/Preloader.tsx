@@ -7,12 +7,7 @@ export default function Preloader() {
   const [isLoading, setIsLoading] = useState(true);
   const [isFadingOut, setIsFadingOut] = useState(false);
 
-  const hasRun = useRef(false);
-
   useEffect(() => {
-    if (hasRun.current) return;
-    hasRun.current = true;
-
     // Lock scroll
     document.body.style.overflow = "hidden";
 

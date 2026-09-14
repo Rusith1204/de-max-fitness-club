@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useEffect } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, Variants } from "framer-motion";
 import Image from "next/image";
 import { Target, Award, Clock, Users } from "lucide-react";
 import anime from "animejs";
@@ -47,7 +47,7 @@ const containerVariants = {
   },
 };
 
-const itemVariants: any = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100, damping: 15 } },
 };
@@ -167,7 +167,7 @@ export default function About() {
           transition={{ duration: 0.8, delay: 0.6, type: "spring", bounce: 0.4 }}
           className="mt-20 md:mt-32 grid grid-cols-2 md:grid-cols-4 gap-6"
         >
-          {stats.map((stat, i) => {
+          {stats.map((stat) => {
             const Icon = stat.icon;
             return (
               <motion.div

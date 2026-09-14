@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import { motion, useInView, useScroll, useTransform, Variants } from "framer-motion";
 import Image from "next/image";
 
 const InstagramIcon = ({ className }: { className?: string }) => (
@@ -62,7 +62,7 @@ const containerVariants = {
   },
 };
 
-const cardVariants: any = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 80, rotateX: -15 },
   visible: { 
     opacity: 1, 
@@ -128,7 +128,7 @@ export default function Trainers() {
           animate={isInView ? "visible" : "hidden"}
           className="mt-20 grid sm:grid-cols-2 lg:grid-cols-3 gap-10"
         >
-          {trainers.map((trainer, i) => (
+          {trainers.map((trainer) => (
             <motion.div
               key={trainer.name}
               variants={cardVariants}

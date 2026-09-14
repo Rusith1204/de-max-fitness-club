@@ -79,8 +79,8 @@ export default function Gallery() {
     // Anime.js glitch/flash effect on the buttons
     anime({
       targets: '.filter-btn',
-      scale: (el: any, i: any, l: any) => (el.textContent === cat ? [0.9, 1.05, 1] : 1),
-      opacity: (el: any, i: any, l: any) => (el.textContent === cat ? [0.5, 1] : 0.7),
+      scale: (el: Element) => (el.textContent === cat ? [0.9, 1.05, 1] : 1),
+      opacity: (el: Element) => (el.textContent === cat ? [0.5, 1] : 0.7),
       duration: 600,
       easing: 'easeOutElastic(1, .8)'
     });

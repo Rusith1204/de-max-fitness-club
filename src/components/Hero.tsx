@@ -74,11 +74,11 @@ export default function Hero() {
         delay: anime.stagger(300),
         loop: true,
       });
-
+      const currentParticles = particlesRef.current;
       return () => {
         // Cleanup particles on unmount
-        if (particlesRef.current) {
-          particlesRef.current.innerHTML = "";
+        if (currentParticles) {
+          currentParticles.innerHTML = "";
         }
       };
     }
