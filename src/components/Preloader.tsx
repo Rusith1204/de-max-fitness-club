@@ -1,13 +1,18 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import anime from "animejs";
 
 export default function Preloader() {
   const [isLoading, setIsLoading] = useState(true);
   const [isFadingOut, setIsFadingOut] = useState(false);
 
+  const hasRun = useRef(false);
+
   useEffect(() => {
+    if (hasRun.current) return;
+    hasRun.current = true;
+
     // Lock scroll
     document.body.style.overflow = "hidden";
 
@@ -49,6 +54,7 @@ export default function Preloader() {
 
     return () => {
       document.body.style.overflow = "";
+      tl.pause();
     };
   }, []);
 

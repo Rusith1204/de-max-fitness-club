@@ -19,7 +19,12 @@ export default function Hero() {
   const yBackground = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   const opacityText = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
+  const hasRun = useRef(false);
+
   useEffect(() => {
+    if (hasRun.current) return;
+    hasRun.current = true;
+
     // 1. Anime.js Text Reveal
     if (textRef.current) {
       // We will split the text manually since we don't have a specific text-splitting library here,
