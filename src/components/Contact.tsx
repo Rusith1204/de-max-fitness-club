@@ -218,7 +218,7 @@ export default function Contact() {
                   Location
                 </h4>
                 <p className="text-sm text-brand-gray mt-1">
-                  දෙ Max Fitness Club, Ratnapura, Sri Lanka
+                  දෙ Max Fitness Club, kegalle, Rambukkana,, Sri Lanka
                 </p>
               </div>
               <div className="glass-light rounded-xl p-5 group hover:border-brand-red/20 transition-all duration-300">
