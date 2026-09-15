@@ -139,7 +139,7 @@ export default function Footer() {
                 <p className="text-sm text-brand-gray">
                   දෙ Max Fitness Club
                   <br />
-                  kegalle, Rambukkana,, Sri Lanka
+                  kegalle, Rambukkana, Sri Lanka
                 </p>
               </div>
               <div>
